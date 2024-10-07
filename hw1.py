@@ -1,4 +1,4 @@
-from typing import List
+from typing import List # 從 typing 模組中導入 List，以便能夠使用類型提示
 
 def countLetters(sentence: str) -> List[int]:
     letterCount: List[int] = [0] * 26
