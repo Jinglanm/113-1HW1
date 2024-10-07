@@ -56,6 +56,53 @@ public void mt_getResult(){
 1. 請解釋何謂git中下列指令代表什麼？並舉個例子，同時必須說明該例子的結果。其指令有add、commit、push、fetch、pull、branch、checkout與merge。
 
 Ans:
+1. git add
+解釋：將變更的檔案加入暫存區，為下一次提交做好準備。
+例子：
+git add filename.txt
+結果：filename.txt 會被加入到暫存區，但尚未提交到版本庫。這意味著對這個檔案的更改會在下次執行 git commit 時被記錄。
+
+2. git commit
+解釋：將暫存區的變更記錄到本地版本庫，並附上一個提交信息。
+例子：
+git commit -m "Add new feature"
+結果：變更將被永久保存到本地版本庫中，並且你會看到提交信息 "Add new feature" 代表這次提交的目的。
+
+3. git push
+解釋：將本地版本庫的變更上傳到遠端版本庫。
+例子：
+git push origin main
+結果：本地的 main 分支上的提交會被上傳到遠端的 main 分支，使得其他人也能看到這些變更。
+
+4. git fetch
+解釋：從遠端版本庫獲取最新的變更，但不會自動合併到當前分支。
+例子：
+git fetch origin
+結果：遠端版本庫的變更會被下載到本地，但不會影響當前的工作分支。這使得你可以查看最新的變更後再決定是否合併。
+
+5. git pull
+解釋：從遠端版本庫獲取最新的變更並自動合併到當前分支。
+例子：
+git pull origin main
+結果：當前分支會更新為遠端 main 分支的最新版本，可能會自動合併。如果有衝突，則需要手動解決。
+
+6. git branch
+解釋：列出、建立或刪除分支。
+例子：
+git branch new-feature
+結果：在本地版本庫中創建一個名為 new-feature 的新分支，讓你可以在此分支上進行獨立的開發。
+
+7. git checkout
+解釋：切換到指定的分支或恢復檔案。
+例子：
+git checkout new-feature
+結果：當前工作目錄會切換到 new-feature 分支，並顯示該分支的內容。
+
+8. git merge
+解釋：將兩個分支的變更合併到一起。
+例子：
+git merge new-feature
+結果：當前分支會合併 new-feature 分支的變更。如果沒有衝突，這些變更會被整合到當前分支中；如果有衝突，則需要手動解決。
 
 
 
