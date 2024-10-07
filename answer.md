@@ -128,9 +128,34 @@ git merge new-feature
     t: 1
     ```
 
-Ans:
+Ans:```from typing import List 
 
+def countLetters(sentence: str) -> List[int]: 
+    letterCount: List[int] = [0] * 26  
 
+    for char in sentence: 
+        if char.isalpha(): 
+            index = ord(char) - ord('a')  
+            letterCount[index] += 1    
+
+    return letterCount  
+pass
+
+這段程式碼的目的是對輸入的字串中的每個字母進行計數，並返回一個列表，其中每個元素對應於字母表中一個字母的出現次數。這個過程忽略了非字母字符和大小寫的區別。若要使其完全支持大小寫，則在進行計算索引之前應先將字母轉為小寫
+
+def printLetterCount(letterCount: List[int]) -> None: 
+
+    for i in range(26):  
+        if letterCount[i] > 0: 
+            print(f"{chr(i + ord('a'))}: {letterCount[i]}") 
+pass
+
+這段程式碼的作用是遍歷字母計數的列表，找出所有出現過的字母，並將其與出現的次數一起打印出來。這使得最終的輸出顯示了哪些字母在輸入的句子中出現過以及每個字母的具體出現次數。
+
+inputSentence: str = "this is an apple"  
+letterCount: List[int] = countLetters(inputSentence)  
+printLetterCount(letterCount) 
+```
 
 3. 請新增檔案**hw1_2.py，**輸入一個正整數(N)，其中$1\le N \le 100000$，請將該正整數輸出進行反轉
 
