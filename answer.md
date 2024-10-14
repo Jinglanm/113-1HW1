@@ -128,7 +128,8 @@ git merge new-feature
     t: 1
     ```
 
-Ans:```from typing import List 
+Ans:```
+from typing import List 
 
 def countLetters(sentence: str) -> List[int]: 
     letterCount: List[int] = [0] * 26  
